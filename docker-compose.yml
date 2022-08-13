@@ -2,7 +2,7 @@
 version: "3.0"
 services:
   sandbox:
-    image: gedas/sandbox:latest
+    image: gedulis12/sandbox:latest
     container_name: sandbox_environment
     ports:
       - '2200:22'
