@@ -1,6 +1,6 @@
-FROM alpine:latest
+FROM archlinux:latest
 
-RUN apk add --no-cache \
+RUN pacman -Syu --no-cache \
 git \
 openssh \
 neofetch \
