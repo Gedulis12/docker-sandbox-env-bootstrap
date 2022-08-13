@@ -1,11 +1,7 @@
 FROM archlinux:latest
 
-RUN pacman -Syu --no-cache \
-git \
-openssh \
-neofetch \
-curl \
-openssh-server
+RUN yes | pacman -Syu 
+RUN yes | pacman -S openssh
 
 COPY entrypoint.sh /entrypoint.sh
 

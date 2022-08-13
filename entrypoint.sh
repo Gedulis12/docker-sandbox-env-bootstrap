@@ -9,8 +9,8 @@ __create_rundir() {
 
 __create_user() {
 # Create a user to SSH into as.
-useradd $SSH_USERNAME
-echo -e "$SSH_USERPASS\n$SSH_USERPASS" | (passwd --stdin $SSH_USERNAME)
+useradd -m $SSH_USERNAME
+echo -e "$SSH_USERPASS\n$SSH_USERPASS" | passwd $SSH_USERNAME
 }
 
 __create_hostkeys() {
