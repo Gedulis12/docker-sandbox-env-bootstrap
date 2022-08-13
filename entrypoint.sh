@@ -10,7 +10,9 @@ __create_rundir() {
 __create_user() {
 # Create a user to SSH into as.
 useradd -m $SSH_USERNAME
+usermod -aG wheel $SSH_USERNAME
 echo -e "$SSH_USERPASS\n$SSH_USERPASS" | passwd $SSH_USERNAME
+echo '%wheel ALL=(ALL:ALL) ALL' >> /etc/sudoers
 }
 
 __create_hostkeys() {

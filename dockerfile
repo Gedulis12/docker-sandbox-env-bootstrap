@@ -1,7 +1,7 @@
 FROM archlinux:latest
 
 RUN yes | pacman -Syu 
-RUN yes | pacman -S openssh
+RUN yes | pacman -S openssh sudo
 
 COPY entrypoint.sh /entrypoint.sh
 
