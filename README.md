@@ -8,4 +8,4 @@ Clone this repository and run the following commands:
 2. docker-compose up -d
 ```
 That's it! In order to ssh into the sandbox environment:
-`ssh -p 2200 sandboxuser@localhost`
+`ssh -p 2200 -o IdentitiesOnly=yes sandboxuser@localhost`
